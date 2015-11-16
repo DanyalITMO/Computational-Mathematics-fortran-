@@ -16,5 +16,6 @@ program reference_lab_2
 
    call input(ifile)
    call decomposition
+   call inverse()
    call output(ofile)
 end program reference_lab_2

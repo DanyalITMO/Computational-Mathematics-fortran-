@@ -22,6 +22,7 @@ end subroutine  input
 
 
 subroutine output(OutputFile)
+
    integer :: i, j
 	character(*),parameter :: ENC = "UTF-8"
 	character(*), intent(in)      :: OutputFile 
@@ -47,6 +48,11 @@ subroutine output(OutputFile)
       write(out, *) "U"	   
          do i = 1, 3
             write(out, *) (u(i, j), j = 1, 3)
+         end do
+
+    write(out, *) "a^-1"	   
+         do i = 1, 3
+            write(out, *) (A_inverse(i, j), j = 1, 3)
          end do
 	   
 	close(out)
